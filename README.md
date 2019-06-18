@@ -25,6 +25,6 @@ A COBRA instance is available [here](https://services.cbib.u-bordeaux.fr/cobra/l
 
 ## About
 (PLANT-KBBE) 2013 Projet COBRA.
-<br/>Project ID: [ANR-13-KBBE-0006](http://www.agence-nationale-recherche.fr/Project-ANR-13-KBBE-0006)
-This application was first initiated by CBiB. You can have a look at the inital project [here](https://github.com/marieBvr/COBRA).
+<br/>Project ID: [ANR-13-KBBE-0006](http://www.agence-nationale-recherche.fr/Project-ANR-13-KBBE-0006).
+<br/>This application was first initiated by CBiB. You can have a look at the inital project [here](https://github.com/marieBvr/COBRA).
 
