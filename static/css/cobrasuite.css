@@ -1,0 +1,26 @@
+/*!
+ * 
+ * This stylesheet was written by @Marie Lefebvre
+ * Contact: marie.lefebvre@inra.fr
+ */
+
+ .page-header{
+    padding-bottom: 9px;
+    margin: 40px 0 20px;
+    border-bottom: 1px solid #eee;
+ }
+
+ .logo{
+    width: 150px;
+    margin: auto;
+    margin-top: 20px;
+ }
+
+.cobra-caption{
+	background-color: rgba(255, 255, 255, 0.4); /* black */
+	padding: 15px 15px 15px 15px;
+}
+
+.cobra-caption h1{
+	color: #fff;
+}
