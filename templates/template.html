@@ -1,28 +1,56 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
  <head>
-   <meta charset="utf-8">
-   <title>Flask Parent Template</title>
-   <link rel="stylesheet" href="{{ url_for('static',     filename='css/template.css') }}">
-   <link rel="text/javascript" href="{{ url_for('static',     filename='js/bootstrap.min.js') }}">
-   <link rel="text/javascript" href="{{ url_for('static',     filename='js/jquery.min.js') }}">
-   <link rel="text/javascript" href="{{ url_for('static',     filename='js/network.js') }}">
+  <meta charset="utf-8">
+  <title>COBRAsuite</title>
+  <link rel="stylesheet" href="{{ url_for('static',     filename='css/template.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static',     filename='css/bootstrap/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static',     filename='css/simple-sidebar.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static',     filename='css/cobrasuite.css') }}">   
+  <script type="text/javascript" src="{{ url_for('static',     filename='js/jquery.min.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static',     filename='js/bootstrap/bootstrap.min.js') }}"></script>
  </head>
+
  <body>
-    <header>
-      <div class="container">
-        <h1 class="logo">First Web App</h1>
-        <strong><nav>
-          <ul class="menu">
-            <li><a href="{{ url_for('home') }}">Home</a></li>
-            <li><a href="{{ url_for('about') }}">About</a></li>
-          </ul>
-        </nav></strong>
+
+    <div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class="bg-dark border-right" id="sidebar-wrapper">
+      <div class="sidebar-heading">
+        <img src="{{ url_for('static',     filename='images/cobra-icon.png') }}" alt="COBRA logo" class="logo">
+        COBRAsuite
       </div>
-    </header>
-    
-    {% block content %}
-    {% endblock %}
-    
+      <div class="list-group list-group-flush">
+        <a href="{{ url_for('home') }}" class="list-group-item list-group-item-light list-group-item-action bg-dark">HOME</a>
+        <a href="#" class="list-group-item list-group-item-light list-group-item-action bg-dark">SEARCH</a>
+        <a href="#" class="list-group-item list-group-item-light list-group-item-action bg-dark">ACCOUNT</a>
+        <a href="{{ url_for('about') }}" class="list-group-item list-group-item-light list-group-item-action bg-dark">ABOUT</a>
+      </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+      <div class="container-fluid">
+        {% block content %}
+        {% endblock %}
+      </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+    <script language="JavaScript" type="text/javascript">
+      $(document).ready(function(){
+        $('.carousel').carousel({
+          interval: 2000
+        })
+      });    
+    </script>
+
  </body>
+
 </html>
