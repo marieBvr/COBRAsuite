@@ -2,16 +2,56 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>About Flask</title>
+    <title>About COBRAsuite</title>
   </head>
   <body>
     {% extends "template.html" %}
     {% block content %}
 
-    <h1> About Flask </h1>
-    <p> Flask is a micro web framework written in Python.</p>
-    <p> Applications that use the Flask framework include Pinterest,
-      LinkedIn, and the community web page for Flask itself.</p>
+    <div class="about-content">
+      <h1> About COBRAsuite database </h1>
+      <div class="page-header">
+        <h2>What is CAOBRAsuite ?</h2>
+      </div>
+        <p> 
+          ANR Programme: <a href="http://www.agence-nationale-recherche.fr/en/funded-projects/?tx_lwmsuivibilan_pi1[Programme]=843">Food &amp; Feed: crop yields and nutrition security in the context of climate change (PLANT-KBBE) 2013</a><br/>
+          Project ID: <a href="http://www.agence-nationale-recherche.fr/?Project=ANR-13-KBBE-0006">ANR-13-KBBE-0006</a><br/>
+          Project coordinator: Veronique DECROOCQ (UMR 1332 Biologie et Pathologie du Fruit)
+        </p>        
+      
+      <div class="page-header">
+        <h2>Data source</h2>
+      </div>
+      <p> 
+        COBRAsuite gathers information from 3 data sources:
+        <ul class="list-group">
+          <li class="list-group-item"><a href="https://thebiogrid.org/">BIOGRID</a></li>
+          <li class="list-group-item"><a href="https://www.ebi.ac.uk/intact/">INTACT</a></li>
+          <li class="list-group-item"><a href="https://string-db.org/">STRINGdb</a></li>
+        </ul>
+      </p>
+      
+      <div class="page-header">
+        <h2>Contributors</h2>
+      </div>
+      <p>COBRAsuite plant virus interaction database is developed in coordination with 
+        other plant genomics and bioinformatics groups via the consortium. The Plant KBBE 
+        project is funded by the European Commission within its 7th Framework Programme, 
+        under the thematic area. <br/>
+      </p>
+
+      <div class="page-header">
+        <h2>Website</h2>
+      </div>
+      <p>
+        The COBRAsuite website is powered by INRA.<br/>
+        The current page is using a bootstrap (Code licensed under MIT) template provided by 
+        <a href="http://startbootstrap.com/sb-admin" target="_blank">Start bootstrap</a> 
+        (license Apache 2.0).
+        The web-application is based on <a href="" target="_blank">Flask</a> 
+        python framework.
+        The network viewer is based on Cytoscape.js framework.</p>
+    </div>
 
     {% endblock %}
   </body>
