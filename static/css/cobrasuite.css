@@ -8,6 +8,11 @@
     padding-bottom: 9px;
     margin: 40px 0 20px;
     border-bottom: 1px solid #eee;
+    width: 80%;
+    letter-spacing: 5px;
+ }
+
+ .home-content{
  }
 
  .logo{
@@ -18,9 +23,33 @@
 
 .cobra-caption{
 	background-color: rgba(255, 255, 255, 0.4); /* black */
-	padding: 15px 15px 15px 15px;
 }
 
-.cobra-caption h1{
+.cobra-caption > h1{
 	color: #fff;
+	letter-spacing: 3px;
+}
+
+.cobra-acronym{
+	font-family: 'Oswald', sans-serif;
+	letter-spacing: 2px;
+	padding-bottom: 50px;
+}
+
+.cobra-faq{
+	font-family: 'Oswald', sans-serif;
+	letter-spacing: 2px;	
+}
+
+.cobra-feature{
+	padding-top: 50px;
+}
+
+.card-header > .cobra-card{
+	letter-spacing: 3px;
+}
+
+#carousel{
+	width: 80%;
+    margin: 0 auto;
 }

@@ -7,8 +7,10 @@
   <link rel="stylesheet" href="{{ url_for('static',     filename='css/bootstrap/bootstrap.min.css') }}">
   <link rel="stylesheet" href="{{ url_for('static',     filename='css/simple-sidebar.css') }}">
   <link rel="stylesheet" href="{{ url_for('static',     filename='css/cobrasuite.css') }}">   
+  <link rel="stylesheet" href="{{ url_for('static',     filename='css/font/css/open-iconic-bootstrap.css') }}">
   <script type="text/javascript" src="{{ url_for('static',     filename='js/jquery.min.js') }}"></script>
   <script type="text/javascript" src="{{ url_for('static',     filename='js/bootstrap/bootstrap.min.js') }}"></script>
+
  </head>
 
  <body>
@@ -23,9 +25,12 @@
       </div>
       <div class="list-group list-group-flush">
         <a href="{{ url_for('home') }}" class="list-group-item list-group-item-light list-group-item-action bg-dark">HOME</a>
-        <a href="#" class="list-group-item list-group-item-light list-group-item-action bg-dark">SEARCH</a>
+        <a href="{{ url_for('search') }}" class="list-group-item list-group-item-light list-group-item-action bg-dark">SEARCH</a>
         <a href="#" class="list-group-item list-group-item-light list-group-item-action bg-dark">ACCOUNT</a>
         <a href="{{ url_for('about') }}" class="list-group-item list-group-item-light list-group-item-action bg-dark">ABOUT</a>
+      </div>
+      <div class="sidebar-footer">
+        <a href="http://www.inra.fr/" target="_blank">INRA</a>
       </div>
     </div>
     <!-- /#sidebar-wrapper -->
@@ -46,7 +51,7 @@
     <script language="JavaScript" type="text/javascript">
       $(document).ready(function(){
         $('.carousel').carousel({
-          interval: 2000
+          interval: 3000
         })
       });    
     </script>
