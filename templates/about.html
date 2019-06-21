@@ -9,18 +9,31 @@
     {% block content %}
 
     <div class="about-content">
-      <h1> About COBRAsuite database </h1>
       <div class="page-header">
-        <h2>What is CAOBRAsuite ?</h2>
+        <h1> About COBRAsuite database </h1>
       </div>
-        <p> 
-          ANR Programme: <a href="http://www.agence-nationale-recherche.fr/en/funded-projects/?tx_lwmsuivibilan_pi1[Programme]=843">Food &amp; Feed: crop yields and nutrition security in the context of climate change (PLANT-KBBE) 2013</a><br/>
-          Project ID: <a href="http://www.agence-nationale-recherche.fr/?Project=ANR-13-KBBE-0006">ANR-13-KBBE-0006</a><br/>
-          Project coordinator: Veronique DECROOCQ (UMR 1332 Biologie et Pathologie du Fruit)
-        </p>        
+
+      <!-- FEATURE 1-->
+      <div class="cobra-feature">
+        <h2><p class="cobra-faq">What is CAOBRAsuite ?</p></h2>
+      </div> 
+      <p> 
+        Plant viruses cause an estimated 50 billion euros loss worldwide per year. Viral diseases represent one of the most limiting factors in European crop 
+        production having negative effects on the quantity and quality of foodstuffs. The recent identification of plant factors required for the virus infection 
+        cycle, together with the development of functional genomic tools in several economically important crops, offer novel opportunities to protect crop plants 
+        against viral diseases. However, current candidate genes are few, and in the better-studied case (i.e. eIF4E, eIF4G) their proteins interact mainly with 
+        the same viral factor. This is a major limitation that compromises the durability of resistances, because resistance depends on the introduction of a 
+        single trait implicating one single viral counterpart. The scope of COBRA is to intensify applied and fundamental research on plant/virus interactions in 
+        order to diversify targets for resistance gene pyramiding strategies and to match the research outputs with industry and breeding applications.
+        <br />
+        ANR Programme: <a href="http://www.agence-nationale-recherche.fr/en/funded-projects/?tx_lwmsuivibilan_pi1[Programme]=843">Food &amp; Feed: crop yields and nutrition security in the context of climate change (PLANT-KBBE) 2013</a><br/>
+        Project ID: <a href="http://www.agence-nationale-recherche.fr/?Project=ANR-13-KBBE-0006">ANR-13-KBBE-0006</a><br/>
+        Project coordinator: Veronique DECROOCQ (UMR 1332 Biologie et Pathologie du Fruit)
+      </p>  
       
-      <div class="page-header">
-        <h2>Data source</h2>
+      <!-- FEATURE 2-->
+      <div class="cobra-feature">
+        <h2><p class="cobra-faq">Data source</p></h2>
       </div>
       <p> 
         COBRAsuite gathers information from 3 data sources:
@@ -31,17 +44,73 @@
         </ul>
       </p>
       
-      <div class="page-header">
-        <h2>Contributors</h2>
+      <!-- FEATURE 3-->
+      <div class="cobra-feature">
+        <h2><p class="cobra-faq">Contributors</p></h2>
       </div>
-      <p>COBRAsuite plant virus interaction database is developed in coordination with 
-        other plant genomics and bioinformatics groups via the consortium. The Plant KBBE 
-        project is funded by the European Commission within its 7th Framework Programme, 
-        under the thematic area. <br/>
+      <p>
+        COBRAsuite plant virus interaction database is developed in coordination with 
+        other plant genomics and bioinformatics groups via the consortium. 
+        <br/>
+        The Plant KBBE project is funded by the European Commission within its 7th Framework 
+        Programme, under the thematic area. <br/>
       </p>
+      <div class="row">
+        <div class="card mx-3 my-2 text-center" style="width: 13rem;">
+          <img class="card-img-top my-auto" src="{{ url_for('static',     filename='images/inra_logo.png') }}" alt="Card image cap">
+          <div class="card-footer">
+            <p class="card-text">INRA</p>
+          </div>
+        </div>
+        <div class="card mx-3 my-2 text-center" style="width: 13rem;">
+          <img class="card-img-top my-auto" src="{{ url_for('static',     filename='images/cgfb_logo.jpg') }}" alt="Card image cap">
+          <div class="card-footer">
+            <p class="card-text">CGFB</p>
+          </div>
+        </div>
+        <div class="card mx-3 my-2 text-center" style="width: 13rem;">
+          <img class="card-img-top my-auto" src="{{ url_for('static',     filename='images/abiopep3_logo.jpg') }}" alt="Card image cap">
+          <div class="card-footer">
+            <p class="card-text">ABIOPEP</p>
+          </div>
+        </div>
+        <div class="card mx-3 my-2 text-center" style="width: 13rem;">
+          <img class="card-img-top my-auto" src="{{ url_for('static',     filename='images/jki_logo.gif') }}" alt="Card image cap">
+          <div class="card-footer">
+            <p class="card-text">JKI</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="card mx-3 my-2 text-center" style="width: 13rem;">
+          <img class="card-img-top my-auto" src="{{ url_for('static',     filename='images/cnb_logo.jpg') }}" alt="Card image cap">
+          <div class="card-footer">
+            <p class="card-text">CNB</p>
+          </div>
+        </div>
+        <div class="card mx-3 my-2 text-center" style="width: 13rem;">
+          <img class="card-img-top my-auto" src="{{ url_for('static',     filename='images/csic_logo.jpg') }}" alt="Card image cap">
+          <div class="card-footer">
+            <p class="card-text">CSCI</p>
+          </div>
+        </div>
+        <div class="card mx-3 my-2 text-center" style="width: 13rem;">
+          <img class="card-img-top my-auto" src="{{ url_for('static',     filename='images/noordsat_logo.jpg') }}" alt="Card image cap">
+          <div class="card-footer">
+            <p class="card-text">NOORDSAT</p>
+          </div>
+        </div>
+        <div class="card mx-3 my-2 text-center" style="width: 13rem;">
+          <img class="card-img-top my-auto" src="{{ url_for('static',     filename='images/ipk_logo.png') }}" alt="Card image cap">
+          <div class="card-footer">
+            <p class="card-text">IPK</p>
+          </div>
+        </div>
+      </div>
 
-      <div class="page-header">
-        <h2>Website</h2>
+      <!-- FEATURE 4-->
+      <div class="cobra-feature">
+        <h2><p class="cobra-faq">Website</p></h2>
       </div>
       <p>
         The COBRAsuite website is powered by INRA.<br/>

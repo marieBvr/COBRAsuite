@@ -23,6 +23,16 @@ body {
   text-align: center;
 }
 
+#sidebar-wrapper .sidebar-footer {
+  color: #fff;
+  text-align: center;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  position: fixed;
+  bottom: 0;
+  width: 15rem;
+}
+
 #sidebar-wrapper .list-group {
   width: 15rem;
 }
