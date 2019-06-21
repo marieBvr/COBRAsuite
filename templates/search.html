@@ -12,11 +12,12 @@
         <h1> Search </h1>
       </div>
 
-      <div class="card w-75">
+      <div class="card w-75 my-5">
         <div class="card-header cobra-card">
-          Protein
+          PROTEIN
         </div>
         <div class="card-body">
+          <p class="card-text">COBRA database provides knowledges on the viral factor(s) that determine(s) the breaking of the resistance and evaluates the durability of the resistance conferred by the new candidate genes prior to transfer to crop species.</p>
           <!-- <h5 class="card-title">Special title treatment</h5> -->
           <form class="form-inline">
             <div class="form-group mx-sm-3 mb-2">
@@ -25,6 +26,37 @@
               <input type="password" class="form-control mx-2" id="search-protein" placeholder="AT1G75950">
               <!-- Select -->
               <label for="search-species"> For </label>
+              <select class="form-control mx-2" id="search-species">
+                <option value="All species" selected="selected">All species</option>
+                <option disabled="disabled" value="">---</option>
+                <option value="Arabidopsis thaliana">Arabidopsis thaliana</option>
+                <option value="Curcumis melo">Curcumis melo</option>
+                <option value="Hordeum vulgare">Hordeum vulgare</option>
+                <option value="Oriza sativa ssp japonica">Oriza sativa ssp japonica</option>
+                <option value="Prunus persica">Prunus persica</option>
+                <option value="Solanum lycopersicum">Solanum lycopersicum</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary mb-2"><span class="oi oi-magnifying-glass"></span></button>
+          </form>
+        </div>
+        <!--#card-body -->
+      </div>  
+      <!--#card -->  
+
+      <div class="card w-75 my-5">
+        <div class="card-header cobra-card">
+          NETWORK
+        </div>
+        <div class="card-body">
+          <p class="card-text">Display the direct interactors of your protein.</p>
+          <form class="form-inline">
+            <div class="form-group mx-sm-3 mb-2">
+              <!-- Input -->
+              <label for="search-protein">Get network for </label>
+              <input type="password" class="form-control mx-2" id="search-protein" placeholder="AT1G75950">
+              <!-- Select -->
+              <label for="search-species"> Of </label>
               <select class="form-control mx-2" id="search-species">
                 <option value="All species" selected="selected">All species</option>
                 <option disabled="disabled" value="">---</option>
