@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
  <head>
   <meta charset="utf-8">
-  <title>COBRAsuite</title>
+  <title>COBRA</title>
   <link rel="stylesheet" href="{{ url_for('static',     filename='css/template.css') }}">
   <link rel="stylesheet" href="{{ url_for('static',     filename='css/bootstrap/bootstrap.min.css') }}">
   <link rel="stylesheet" href="{{ url_for('static',     filename='css/simple-sidebar.css') }}">
@@ -21,16 +21,16 @@
     <div class="bg-dark border-right" id="sidebar-wrapper">
       <div class="sidebar-heading">
         <img src="{{ url_for('static',     filename='images/cobra-icon.png') }}" alt="COBRA logo" class="logo">
-        COBRAsuite
+        COBRA
       </div>
-      <div class="list-group list-group-flush">
+      <div class="list-group list-group-flush cobra-link">
         <a href="{{ url_for('home') }}" class="list-group-item list-group-item-light list-group-item-action bg-dark">HOME</a>
         <a href="{{ url_for('search') }}" class="list-group-item list-group-item-light list-group-item-action bg-dark">SEARCH</a>
         <a href="#" class="list-group-item list-group-item-light list-group-item-action bg-dark">ACCOUNT</a>
         <a href="{{ url_for('about') }}" class="list-group-item list-group-item-light list-group-item-action bg-dark">ABOUT</a>
       </div>
       <div class="sidebar-footer">
-        <a href="http://www.inra.fr/" target="_blank">INRA</a>
+        <a href="http://www.inrae.fr/" target="_blank">INRAE</a>
       </div>
     </div>
     <!-- /#sidebar-wrapper -->
