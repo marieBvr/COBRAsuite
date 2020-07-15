@@ -2,15 +2,25 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>COBRA ACCOUNT</title>
+    <title>COBRA Account</title>
   </head>
   <body>
     {% extends "template.html" %}
     {% block content %}
 
     <div class="account-content">
-      <div class="row justify-content-md-center pt-5">
-
+      <div class="row left-content-md-center pt-5">
+        <div class="col-md-6 border rounded m-3 p-3">
+          <p>You are connected as <b>{{ session['login'] }}</b>.</p>
+          <p><b>Firstname</b>: {{ user['lastname'] }}</p>
+          <p><b>Lastname</b>: {{ user['firstname'] }}</p>
+          <p><span class="oi oi-envelope-closed" style="font-size: 15px;"></span> {{ user['email_adress'] }} </p>
+          <p><span class="oi oi-home" style="font-size: 15px;"></span> {{ user['institution'] }} </p>
+          <br />
+          <form method=POST action="{{ url_for('disconnect') }}">
+            <button type="submit" class="shadow btn btn-secondary"><span class="oi oi-power-standby"></span> Disconnect</button>
+          </form>
+        </div>
       </div><!--/#row -->
     </div><!--/#home-content -->
 

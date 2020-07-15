@@ -40,7 +40,16 @@ def about():
 
 @app.route("/account")
 def account():
-    return render_template("account.html")
+    users = mongo.db.users
+    log_user = users.find_one({'login':session['login']})
+    print(log_user)
+    return render_template("account.html", user=log_user)
+
+@app.route("/disconnect", methods=['POST'])
+def disconnect():
+    # remove the login from the session if it is there
+    session.pop('login')
+    return redirect(url_for('home'))
 
 if __name__ == "__main__":
     app.run(debug=True)
