@@ -7,11 +7,9 @@ sys.path.append("./config")
 from config import *
 from basics import load_config
 from logger import Logger
-import string
 from random import *
 
-# Script 
-import datetime
+# Script
 if "log" not in globals():
   log = Logger.init_logger('SAMPLE_DATA_%s'%(LANGUAGE_CODE), load_config())
 
@@ -39,7 +37,6 @@ interactions_table={
 		"n_rows_to_skip":0,
 		"column_keys":['idx','Gene ID','Gene ID 2','OFFICIAL_SYMBOL_A','OFFICIAL_SYMBOL_B','ALIASES_FOR_A','ALIASES_FOR_B','EXPERIMENTAL_SYSTEM','SOURCE','PUBMED_ID','ORGANISM_A_ID','ORGANISM_B_ID'],
 		"sheet_index":0,
-		
 	}
 
 }

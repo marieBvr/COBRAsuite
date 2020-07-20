@@ -7,11 +7,9 @@ sys.path.append("./config")
 from config import *
 from basics import load_config
 from logger import Logger
-import string
 from random import *
 
-# Script 
-import datetime
+# Script
 if "log" not in globals():
   log = Logger.init_logger('SAMPLE_DATA_%s'%(LANGUAGE_CODE), load_config())
 
@@ -22,7 +20,6 @@ measurements_col.drop()
 
 
 ## publications 
-
 melon_pub={
 	"doi":"10.1186/1471-2164-10-467",
 	"url":"http://www.biomedcentral.com/1471-2164/10/467",

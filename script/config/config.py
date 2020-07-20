@@ -1,8 +1,5 @@
-import os
 import pymongo
-import collections
 from pymongo import MongoClient
-from bson.objectid import ObjectId
 
 LANGUAGE_CODE = 'en-us'
 

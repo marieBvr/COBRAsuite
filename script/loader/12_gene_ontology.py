@@ -7,15 +7,13 @@ sys.path.append("./config")
 from config import *
 from basics import load_config
 from logger import Logger
-import string
 from random import *
 
-# Script 
-import datetime
+# Script
 if "log" not in globals():
   log = Logger.init_logger('SAMPLE_DATA_%s'%(LANGUAGE_CODE), load_config())
 
-# Clear db 
+# Clear db
 gene_ontology_col.drop()
 
 ##Mapping Prunus Domestica
@@ -23,6 +21,6 @@ mapping_table={
 	"data_file":"gene_ontology/obo/gene_ontology.obo",
 	"type":"rdf/XML",
 	"url":"",
-	"doi":"",	
+	"doi":"",
 }
 gene_ontology_col.insert(mapping_table)

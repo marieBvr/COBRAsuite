@@ -8,21 +8,17 @@ from config import *
 from basics import load_config
 from logger import Logger
 from basics import cursor_to_table
-import string
 from random import *
 
-# Script 
-import datetime
+# Script
 if "log" not in globals():
   log = Logger.init_logger('SAMPLE_DATA_%s'%(LANGUAGE_CODE), load_config())
 
 # clear db 
-
 species_col.remove()
 
 
 ##### Species 
-
 ###################################################################################################################
 ############################################ CUCUMIS MELO #####################################################
 ###################################################################################################################

@@ -7,15 +7,13 @@ sys.path.append("./config")
 from config import *
 from basics import load_config
 from logger import Logger
-import string
 from random import *
 
-# Script 
-import datetime
+# Script
 if "log" not in globals():
   log = Logger.init_logger('SAMPLE_DATA_%s'%(LANGUAGE_CODE), load_config())
 
-# clear db 
+# clear db
 sequences_col.drop()
 
 # tsv files werre downloaded from https://www.arabidopsis.org/download/
