@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for, request, session, redirect
+from flask import Flask, render_template, url_for, request, session, redirect, jsonify
 from flask_pymongo import PyMongo
 import hashlib
 
@@ -30,9 +30,15 @@ def login():
 
     return render_template("invalid.html")
 
-@app.route("/search/result/<protein>")
-def search_result():
-    return render_template("search-result.html")
+@app.route("/cobrarest/mappings", methods=['GET'])
+def mappings():
+    # if 'login' in session:
+    mappings = mongo.db.full_mappings
+    all_mappings = mappings.find()
+    output = []
+    for m in all_mappings:
+        output.append({ 'species': m['species'] })
+    return jsonify({ 'results': output })
 
 @app.route("/about")
 def about():
@@ -40,10 +46,13 @@ def about():
 
 @app.route("/account")
 def account():
-    users = mongo.db.users
-    log_user = users.find_one({'login':session['login']})
-    print(log_user)
-    return render_template("account.html", user=log_user)
+    # user is connect
+    if 'login' in session:
+        users = mongo.db.users
+        log_user = users.find_one({'login':session['login']})
+        return render_template("account.html", user=log_user)
+    # user not connected
+    return render_template("login.html")
 
 @app.route("/disconnect", methods=['POST'])
 def disconnect():
