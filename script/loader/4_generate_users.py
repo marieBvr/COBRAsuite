@@ -8,6 +8,7 @@ from config import *
 from basics import load_config
 from logger import Logger
 from random import *
+import string
 from html.parser import HTMLParser
 import hashlib
 
@@ -36,7 +37,7 @@ users_table={
 	'lastname' : 'Benjamin',
 	'email_adress':'benjamin.dartigues@u-bordeaux.fr',
 	'institution':'CBIB',
-	'grade':'super_administrator'
+	'grade':'partner'
 	
 }
 users_col.insert(users_table)
@@ -54,7 +55,7 @@ users_table={
 	'lastname' : 'Macha',
 	'email_adress':'',
 	'institution':'CBIB',
-	'grade':'administrator'
+	'grade':'partner'
 	
 }
 users_col.insert(users_table)
@@ -73,7 +74,7 @@ users_table={
 	'lastname' : 'Alexis',
 	'email_adress':'',
 	'institution':'CBIB',
-	'grade':'administrator'
+	'grade':'partner'
 	
 }
 users_col.insert(users_table)
@@ -92,7 +93,7 @@ users_table={
 	'lastname' : 'Veronique',
 	'email_adress':'',
 	'institution':'INRA Villenave d\'Ornon',
-	'grade':'administrator'
+	'grade':'curator'
 	
 }
 users_col.insert(users_table)
@@ -111,7 +112,7 @@ users_table={
 	'lastname' : 'Sylvie',
 	'email_adress':'',
 	'institution':'INRA Villenave d\'Ornon',
-	'grade':'administrator'
+	'grade':'curator'
 	
 }
 users_col.insert(users_table)
@@ -130,7 +131,7 @@ users_table={
 	'lastname' : 'Jocelyne',
 	'email_adress':'',
 	'institution':'INRA Villenave d\'Ornon',
-	'grade':'administrator'
+	'grade':'curator'
 	
 }
 users_col.insert(users_table)
@@ -148,7 +149,7 @@ users_table={
 	'lastname' : 'Valérie',
 	'email_adress':'',
 	'institution':'INRA Villenave d\'Ornon',
-	'grade':'administrator'
+	'grade':'curator'
 	
 }
 users_col.insert(users_table)
@@ -167,7 +168,7 @@ users_table={
 	'lastname' : 'Jean Luc',
 	'email_adress':'',
 	'institution':'INRA Avignon',
-	'grade':'administrator'
+	'grade':'partner'
 	
 }
 users_col.insert(users_table)
@@ -187,7 +188,7 @@ users_table={
 	'lastname' : 'Jean Marc',
 	'email_adress':'',
 	'institution':'INRA Avignon',
-	'grade':'administrator'
+	'grade':'partner'
 	
 }
 users_col.insert(users_table)
@@ -207,7 +208,7 @@ users_table={
 	'lastname' : 'Bernardo',
 	'email_adress':'',
 	'institution':'CSIC',
-	'grade':'administrator'
+	'grade':'partner'
 	
 }
 users_col.insert(users_table)
@@ -227,7 +228,7 @@ users_table={
 	'lastname' : 'Juan Antonio',
 	'email_adress':'',
 	'institution':'CNB CSIC',
-	'grade':'administrator'
+	'grade':'partner'
 	
 }
 users_col.insert(users_table)
@@ -247,7 +248,7 @@ users_table={
 	'lastname' : 'Miguel A.',
 	'email_adress':'',
 	'institution':'CEBAS CSIC',
-	'grade':'administrator'
+	'grade':'partner'
 	
 }
 users_col.insert(users_table)
@@ -267,7 +268,7 @@ users_table={
 	'lastname' : 'Jesus',
 	'email_adress':'',
 	'institution':'Abiopep',
-	'grade':'administrator'
+	'grade':'partner'
 	
 }
 users_col.insert(users_table)
@@ -287,7 +288,7 @@ users_table={
 	'lastname' : 'Antonio',
 	'email_adress':'',
 	'institution':'Abiopep',
-	'grade':'administrator'
+	'grade':'partner'
 	
 }
 users_col.insert(users_table)
@@ -307,7 +308,7 @@ users_table={
 	'lastname' : 'Nils',
 	'email_adress':'',
 	'institution':'IPK',
-	'grade':'administrator'
+	'grade':'partner'
 	
 }
 users_col.insert(users_table)
@@ -327,7 +328,7 @@ users_table={
 	'lastname' : 'Lisa',
 	'email_adress':'',
 	'institution':'IPK',
-	'grade':'administrator'
+	'grade':'partner'
 	
 }
 users_col.insert(users_table)
@@ -344,7 +345,7 @@ users_table={
 	'lastname' : 'Franck',
 	'email_adress':'',
 	'institution':'JKI',
-	'grade':'administrator'
+	'grade':'partner'
 	
 }
 users_col.insert(users_table)
@@ -362,7 +363,7 @@ users_table={
 	'lastname' : 'Sarah',
 	'email_adress':'',
 	'institution':'JKI',
-	'grade':'administrator'
+	'grade':'partner'
 	
 }
 users_col.insert(users_table)
@@ -379,7 +380,7 @@ users_table={
 	'lastname' : 'Dragan',
 	'email_adress':'',
 	'institution':'JKI',
-	'grade':'administrator'
+	'grade':'partner'
 	
 }
 users_col.insert(users_table)
@@ -394,16 +395,16 @@ users_table={
 	'pwd': password,
 	'firstname':'Lafforgue',
 	'lastname' : 'Guillaume',
-	'email_adress':'',
+	'email_adress':'guillaume.lafforgue@inrae.fr',
 	'institution':'INRA Villenave d\'Ornon',
-	'grade':'administrator'
+	'grade':'curator'
 	
 }
 users_col.insert(users_table)
 
 
 characters = string.ascii_letters  + string.digits
-password_gen =  "".join(choice(characters) for x in range(randint(8, 16)))
+password_gen =  "9gPiX68v"
 print("mlefebvre password :" + password_gen)
 password=hashlib.md5(password_gen.encode('utf-8')).hexdigest()
 
@@ -412,9 +413,9 @@ users_table={
 	'pwd': password,
 	'firstname':'Lefebvre',
 	'lastname' : 'Marie',
-	'email_adress':'',
+	'email_adress':'marie.lefebvre@inrae.fr',
 	'institution':'INRA Villenave d\'Ornon',
-	'grade':'administrator'
+	'grade':'super_administrator'
 	
 }
 users_col.insert(users_table)
