@@ -19,17 +19,17 @@ viruses in crops.
 
 
 
-# Contact
+## Contact
 A COBRA instance is available [here](https://services.cbib.u-bordeaux.fr/cobra/login.php).
 
-# About
+## About
 (PLANT-KBBE) 2013 Projet COBRA.
-<br/>Project ID: [ANR-13-KBBE-0006](http://www.agence-nationale-recherche.fr/Project-ANR-13-KBBE-0006).
+<br/>Project ID: [ANR-13-KBBE-0006](https://anr.fr/Projet-ANR-13-KBBE-0006).
 <br/>This application was first initiated by CBiB. You can have a look at the inital project [here](https://github.com/marieBvr/COBRA).
 
-# Documentation
+## Documentation
 
-## Installation
+### Installation on Linux 18.04 server
 ```bash
 sudo apt-get update
 sudo apt install apache2
@@ -38,16 +38,16 @@ sudo apt install python3.6-pip
 curl https://bootstrap.pypa.io/get-pip.py | sudo python3.6
 sudo pip3.6 install flask
 ```
-In you /home/user
+In your /home/user
 ```bash
 git clone https://github.com/marieBvr/COBRAsuite.git
 cd COBRAsuite/
 ```
-Check path to your app
+Check path to cobrasuite
 ```bash
 nano cobrasuite.wsgi
 ```
-For apache
+Configure Apache2 for cobrasuite
 ```bash
 sudo nano /etc/apache2/sites-available/cobrasuite.conf
 ```
@@ -74,7 +74,7 @@ Enable cobrasuite conf
 sudo a2ensite cobrasuite
 ```
 
-## Mongodb
+### Mongodb
 ```bash
 sudo python3.6 -m pip install Flask-PyMongo
 wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | sudo apt-key add -
@@ -96,12 +96,12 @@ sudo apt-get update
 sudo apt-get install mongodb-org
 ```
 
-## COBRA scripts
+### COBRA scripts
 ```bash
 sudo python3.6 -m pip install prettytable 
 sudo python3.6 -m pip install configobj
 ```
-Create dabatade template
+Create dabatase tables
 ```bash
 cd COBRAsuite/script/loader
 python3.6 1_species.py
